@@ -1,4 +1,3 @@
----
 swagger: "2.0"
 x-collection-name: AWS EC2 Systems Manager
 x-complete: 1
@@ -376,6 +375,50 @@ paths:
       - Window
       - Execution
       - Task
+  /?Action=UpdateMaintenanceWindow:
+    get:
+      summary: Update Maintenance Window
+      description: Updates an existing Maintenance Window.
+      operationId: updateMaintenanceWindow
+      x-api-path-slug: actionupdatemaintenancewindow-get
+      parameters:
+      - in: query
+        name: AllowUnassociatedTargets
+        description: Whether targets must be registered with the Maintenance Window
+          before tasks can be   defined for those targets
+        type: string
+      - in: query
+        name: Cutoff
+        description: The number of hours before the end of the Maintenance Window
+          that Systems Manager stops   scheduling new tasks for execution
+        type: string
+      - in: query
+        name: Duration
+        description: The duration of the Maintenance Window in hours
+        type: string
+      - in: query
+        name: Enabled
+        description: Whether the Maintenance Window is enabled
+        type: string
+      - in: query
+        name: Name
+        description: The name of the Maintenance Window
+        type: string
+      - in: query
+        name: Schedule
+        description: The schedule of the Maintenance Window in the form of a cron
+          or rate   expression
+        type: string
+      - in: query
+        name: WindowId
+        description: The ID of the Maintenance Window to update
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Maintenance
+      - Window
   /?Action=RegisterTargetWithMaintenanceWindow:
     get:
       summary: Register Target With Maintenance Window
@@ -473,48 +516,3 @@ paths:
       - Register
       - TaskMaintenance
       - Window
-  /?Action=UpdateMaintenanceWindow:
-    get:
-      summary: Update Maintenance Window
-      description: Updates an existing Maintenance Window.
-      operationId: updateMaintenanceWindow
-      x-api-path-slug: actionupdatemaintenancewindow-get
-      parameters:
-      - in: query
-        name: AllowUnassociatedTargets
-        description: Whether targets must be registered with the Maintenance Window
-          before tasks can be   defined for those targets
-        type: string
-      - in: query
-        name: Cutoff
-        description: The number of hours before the end of the Maintenance Window
-          that Systems Manager stops   scheduling new tasks for execution
-        type: string
-      - in: query
-        name: Duration
-        description: The duration of the Maintenance Window in hours
-        type: string
-      - in: query
-        name: Enabled
-        description: Whether the Maintenance Window is enabled
-        type: string
-      - in: query
-        name: Name
-        description: The name of the Maintenance Window
-        type: string
-      - in: query
-        name: Schedule
-        description: The schedule of the Maintenance Window in the form of a cron
-          or rate   expression
-        type: string
-      - in: query
-        name: WindowId
-        description: The ID of the Maintenance Window to update
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Maintenance
-      - Window
----

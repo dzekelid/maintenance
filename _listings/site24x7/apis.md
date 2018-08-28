@@ -8,50 +8,42 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24
 x-kinRank: "7"
 x-alexaRank: "42122"
 tags: Maintenance
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-28"
+modified: "2018-08-28"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/maintenance/master/_listings/site24x7/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Maintenance API Retrieve Maintenance
-  x-api-slug: maintenance-api
+- name: Maintenance API - Retrieve Maintenance
+  x-api-slug: maintenancemaintenance-id-get
   description: Retrieve configuration of a Scheduled Maintenance.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
   humanURL: https://www.site24x7.com/
-  baseURL: ://www.site24x7.com.///maintenance/{maintenance_id}
-  tags: Maintenance
+  baseURL: ://www.site24x7.com./
+  tags: Monitoring, SaaS, Technology, Relative Data, Service API, Networks
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/maintenance/master/_listings/site24x7/maintenancemaintenance-id-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/maintenance/master/_listings/site24x7/maintenancemaintenance-id-get-openapi.md
-- name: Maintenance API Delete Maintenance
-  x-api-slug: maintenance-api
+- name: Maintenance API - Delete Maintenance
+  x-api-slug: maintenancemaintenance-id-delete
   description: Delete an existing Scheduled Maintenance.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
   humanURL: https://www.site24x7.com/
-  baseURL: ://www.site24x7.com.///maintenance/{maintenance_id}
-  tags: Maintenance
+  baseURL: ://www.site24x7.com./
+  tags: Monitoring, SaaS, Technology, Relative Data, Service API, Networks
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/maintenance/master/_listings/site24x7/maintenancemaintenance-id-delete-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/maintenance/master/_listings/site24x7/maintenancemaintenance-id-delete-openapi.md
-- name: Maintenance API
-  x-api-slug: maintenance-api
-  description: Site24x7 offers both free & paid website monitoring services. Monitor
-    websites remotely and receive instant email/sms alerts if your website becomes
-    unavailable. View uptime & performance graphs of your website monitors.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/481-site24x7.jpg
-  humanURL: https://www.site24x7.com/
-  baseURL: ://www.site24x7.com./
-  tags: Maintenance
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/maintenance/master/_listings/site24x7/openapi.md
 x-common:
 - type: x-website
   url: https://www.site24x7.com/
+- type: x-api-gallery
+  url: http://simply.rets.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://site24x7.stack.network
 - type: x-blog
   url: http://blogs.site24x7.com/
 - type: x-blog-rss
